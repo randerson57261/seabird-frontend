@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Map – Seabird Aware</title>
+    <link rel="stylesheet" href="css/leaflet.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/leaflet.js"></script>
+</head>
+<body>
+    <section id='select_header_map'>
+        <label for="year">Year</label>
+        <label for="species">Species</label>
+        <select name="year" id="year">
+            <option disabled hidden selected>Select Year</option>
+        </select>
+        <select name="species" id="species"></select>
+    </section>  
+    <div id='map'><!-- Plotly chart will be drawn inside this DIV -->
+        <section>
+            <button class='mcas'>Morro Coast Audubon Society</button>
+            <button class='trinidad'>Trinidad</button>
+            <div class="legend">
+                <div class="legend-title">Population</div>
+                <div class="legend-items">
+                    <svg height="20" width="20">
+                        <circle cx="10" cy="10" r=".25rem" stroke="black" fill="#f7f9f7"></circle>
+                    </svg>
+                    <div>0</div>
+                    <svg height="20" width="20">
+                        <circle cx="10" cy="10" r=".5rem" stroke="black" fill="#fdd49e"></circle>
+                    </svg>
+                    <div>1 - 5</div>
+                    <svg height="28" width="30">
+                        <circle cx="15" cy="15" r=".75rem" stroke="black" fill="#fdbb84"></circle>
+                    </svg>
+                    <div>5 - 25</div>
+                    <svg height="40" width="40">
+                        <circle cx="20" cy="20" r="1rem" stroke="black" fill="#fc8d59"></circle>
+                    </svg>
+                    <div>25 - 100</div>
+                    <svg height="45" width="50">
+                        <circle cx="25" cy="21" r="1.25rem" stroke="black" fill="#e34a33"></circle>
+                    </svg>
+                    <div>100 - 250</div>
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="1.5rem" stroke="black" fill="#b30000"></circle>
+                    </svg>
+                    <div>250 +</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/display-map.js"></script>
+</body>
+</html>
